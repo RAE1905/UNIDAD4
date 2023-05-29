@@ -7,6 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Presiona Enter para poner la página verde</h1>
+    <h1>Presiona Ctrl + Enter para que la página sea azul</h1>
 </body>
+<script>
+    window.addEventListener("keydown", function(e){
+        if(e.key == "Enter"){
+            document.body.style.backgroundColor = "green";
+        }
+        if(e.key == "Enter" && e.ctrlKey){
+            document.body.style.backgroundColor = "blue";
+        }
+    })
+    window.addEventListener("keyup", function(e){
+        if(e.key == "Enter"){
+            document.body.style.background="";
+        }
+    })
+</script>
 </html>
